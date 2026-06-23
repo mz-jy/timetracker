@@ -1,0 +1,19 @@
+[project]
+name = "timetracker"
+version = "0.1.0"
+description = "A terminal time tracker with a modern Textual TUI"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "textual>=8.2.7",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project.scripts]
+timetrack = "timetrack:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["timetrack.py"]
